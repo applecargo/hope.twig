@@ -1,0 +1,45 @@
+{% macro looper_front(name) %}
+  <div class="fl w-100 bg-navy">
+    <div class="fl w-40 tc pv3 lh-copy f5 fw7 white">
+      {{ name }}!
+    </div>
+    <div class="fl w-10">
+      <div class="tc pv3">
+        <div class="{{ name }}-start dib br-100 w2 h2 ba bw2 b--white f3 black"></div>
+      </div>
+    </div>
+    <div class="fl w-10">
+      <div class="tc pv3">
+        <div class="{{ name }}-stop dib br-100 w2 h2 ba bw2 b--white f3 black"></div>
+      </div>
+    </div>
+    <div class="fl w-10">
+      <div class="{{ name }}-cnt tc pv3 f3 fw7 white">
+        0
+      </div>
+    </div>
+    <div class="fl w-10">
+      <div class="tc pv3">
+        <div class="{{ name }}-faster dib br-100 w2 h2 ba bw2 b--white f3 black"></div>
+      </div>
+    </div>
+    <div class="fl w-10">
+      <div class="tc pv3">
+        <div class="{{ name }}-slower dib br-100 w2 h2 ba bw2 b--white f3 black"></div>
+      </div>
+    </div>
+  </div>
+{% endmacro looper_front %}
+
+{% macro player_front(name) %}
+  <div class="fl w-100 bg-navy">
+    <div class="fl w-40 tc pv3 lh-copy f5 fw7 white">
+      {{ name }}!
+    </div>
+    <div class="fl w-10">
+      <div class="tc pv3">
+	<div class="{{ name }}-start dib br-100 w2 h2 ba bw2 b--white f3 black"></div>
+      </div>
+    </div>
+  </div>
+{% endmacro player_front %}

@@ -1,0 +1,67 @@
+{% from "macros.html.twig" import player_front as player %}
+{% from "macros.html.twig" import looper_front as looper %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/Tone.min.js"></script>
+    <script type="text/javascript" src="js/socket.io.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/loading-animation.css"/>
+
+  </head>
+
+  <body class="bg-light-blue min-h-100 h-auto">
+
+    <!-- top sticky overlay-ed flasher -->
+    <div class="flasher fixed top-0 left-0 vh-100 w-100 bg-white z-max" style="display:none;pointer-events:none"></div>
+
+    <!-- full page layout -->
+    <div class="vh-100 w-100 absolute top-0 left-0 bg-light-blue">
+      <div class="cf w-100 top-0">
+	
+	<!-- top sticky system status header -->
+	<div class="absolute top-0 right-0 pt2 pr2">
+	  <input type="checkbox" class="netstat input-reset dib br-100 w2 h2 ba bw2 b--near-black" style="pointer-events:none" value="0"/>
+	</div>
+
+	<!-- conductor page -->
+	<div class="ui-page fl w-100 bg-gray" id="page-conductor">
+	  <div class="fl w-100">
+	    <div class="tc">
+	      <div class="dib w3">
+		<img src="imgs/litmusphone.png" />
+	      </div>
+	    </div>
+	  </div>
+	  <div class="fl w-100 tc pv3 lh-copy f5 fw7 black">
+	    의문형의 희망.<br>Looking for the hope? (conductor)
+	  </div>
+        </div>
+
+	{{ player('clap') }}
+	{{ player('marimba') }}
+	
+        {{ looper('dama') }}
+        {{ looper('tiger') }}
+        {{ looper('bee') }}
+        {{ looper('bell') }}
+        {{ looper('bird') }}
+        {{ looper('m01') }}
+        {{ looper('hum01') }}
+        {{ looper('hum02') }}
+        {{ looper('wind') }}
+        {{ looper('cricket') }}
+	
+      </div><!-- full page end -->
+    </div>
+    
+  </body>
+</html>
